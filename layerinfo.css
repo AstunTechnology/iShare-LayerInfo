@@ -1,0 +1,30 @@
+.atLayerInfoTooltip {
+    position: absolute;
+    top: 35;
+    left: 0;
+    padding: 5px;
+    z-index: 10000000;
+    font-size: 12px;
+}
+
+.atLayerInfoTooltip > div {
+    position: relative;
+}
+
+.atLayerInfoTooltip .ui-icon {
+    position:absolute;
+    top:-16px;
+    left:60px;
+}
+
+.atLayerInfoTooltip .text {
+    background-image: url(info.png);
+    background-repeat: none;
+}
+
+.atLayerInfoIcon {
+    width: 16px;
+    height: 16px;
+    background-image: url(info.png);
+    background-repeat: none;
+}
