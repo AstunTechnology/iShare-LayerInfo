@@ -17,6 +17,7 @@ astun.layersHoverInfo = {
             } else {
                 clearInterval(timer);
             }
+        }
     }, 100);
 
     function layerinfo() {
