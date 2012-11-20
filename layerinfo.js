@@ -6,17 +6,18 @@ astun.layersHoverInfo = {
 
 (function() {
 
-    if(jQuery('#atMyMaps').length != 0) {
-
-        var timer = setInterval(function() {
-            var panels = jQuery('#panels');
-            if (panels.length) {
+    var timer = setInterval(function() {
+        if (typeof jQuery != 'undefined') {
+            if(jQuery('#atMyMaps').length) {
+                var panels = jQuery('#panels');
+                if (panels.length) {
+                    clearInterval(timer);
+                    layerinfo();
+                }
+            } else {
                 clearInterval(timer);
-                layerinfo();
             }
-        }, 100);
-
-    }
+    }, 100);
 
     function layerinfo() {
 
