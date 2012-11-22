@@ -8,6 +8,8 @@ astun.layersHoverInfo = {
 
 };
 
+// -- Do not edit past this point -- //
+
 (function() {
 
     // Wait until all of our dependencies are
