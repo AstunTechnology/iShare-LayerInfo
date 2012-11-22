@@ -1,7 +1,11 @@
-// Add an entry for each layer. The layer name should be as found in the mapfile and the text to be displayed
 astun.layersHoverInfo = {
+
+    // Add an entry for each layer. The layer name should be as found
+    // in the mapfile.
+    // Ensure that all lines except the last end with a comma
     "Wards" : "Ward boundaries maintained by the Office of National Statistics",
     "SchoolsPrim" : "Primary Schools maintained by the Local Authority"
+
 };
 
 (function() {
