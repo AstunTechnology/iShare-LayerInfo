@@ -8,11 +8,11 @@ Installation
 
 Copy all files into WebApps\Web\custom\layerinfo\
 
-The css file layerinfo.css needs to be included in the head of your main iShare page:
+The css file layerinfo.css needs to be included in the head section of your main iShare page:
 
 <link href="custom/layerinfo/layerinfo.css" type="text/css" rel="stylesheet" />
 
-The JavaScript file layerinfo.js needs to be included before the end of the body in your main iShare page:
+The JavaScript file layerinfo.js needs to be included before the end of the body section in your main iShare page:
 
 <script src="custom/layerinfo/layerinfo.js" type="text/javascript"></script>
 
