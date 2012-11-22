@@ -19,12 +19,16 @@
 
 .atLayerInfoTooltip .text {
     background-image: url(info.png);
-    background-repeat: none;
+    background-repeat: no-repeat;
+    padding-left: 22px;
 }
 
-.atLayerInfoIcon {
-    width: 16px;
-    height: 16px;
-    background-image: url(info.png);
-    background-repeat: none;
+/* This rule is very specific to ensure we take precedence */
+.atMainLayersGroup ol li .atLayerLink span.atLayerInfoIcon {
+    background-image: url("info.png");
+    background-repeat: no-repeat;
+    display: inline;
+    height: 18px;
+    width: 18px;
+    padding-top: 0;
 }
