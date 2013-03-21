@@ -1,4 +1,4 @@
-astun.layersHoverInfo = {
+Astun.layersHoverInfo = {
 
     // Add an entry for each layer. The layer name should be as found
     // in the mapfile.
@@ -42,7 +42,7 @@ astun.layersHoverInfo = {
 
         // Add listeners to each layer in the list and decorate the
         // layer name with an info icon
-        jQuery.each(astun.layersHoverInfo, function(key, value) {
+        jQuery.each(Astun.layersHoverInfo, function(key, value) {
             jQuery('li[aria-describedby="'+key+'"]')
                 .find('a > span')
                 .live('mouseover', function(){
