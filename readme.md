@@ -1,7 +1,7 @@
 iShare Layer Info
 =================
 
-Allows a simple tooltip to be displayed containing some extra information for a layer in the iShare 4.x layer control.
+Allows a simple tooltip to be displayed containing some extra information for a layer in the iShare 5.x layer control.
 
 Installation
 ------------

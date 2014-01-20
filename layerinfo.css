@@ -27,8 +27,9 @@
 .atMainLayersGroup ol li .atLayerLink span.atLayerInfoIcon {
     background-image: url("info.png");
     background-repeat: no-repeat;
-    display: inline;
-    height: 18px;
+    display: inline-block;
+    height: 13px;
     width: 18px;
     padding-top: 0;
+    padding-bottom: 0;
 }
