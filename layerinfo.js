@@ -45,7 +45,7 @@ Astun.layersHoverInfo = {
         jQuery.each(Astun.layersHoverInfo, function(key, value) {
             jQuery('li[aria-describedby="'+key+'"]')
                 .find('a > span')
-                .live('mouseover', function(){
+                .live(showEventName, function(){
                     var t = jQuery(this).offset().top + jQuery(this).parents('li').height() + 10;
                     var l = jQuery(this).parents('li').offset().left;
                     var w = jQuery(this).parents('li').width();
@@ -54,8 +54,12 @@ Astun.layersHoverInfo = {
                         .show()
                         .find('.text').html(value);
                 })
-                .live('mouseout', function(){
-                    jQuery('.atLayerInfoTooltip').hide();
+                .live('mouseout', function(e){
+                    if (jQuery(e.srcElement).hasClass('atLayerInfoIcon') || jQuery(e.relatedTarget).hasClass('atLayerInfoIcon')) {
+                        // Ignore the event as the mouse has just moved to the icon
+                    } else {
+                        jQuery('.atLayerInfoTooltip').hide();
+                    }
                 })
                 .append('<span class="atLayerInfoIcon"></span>');
         });
