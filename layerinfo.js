@@ -8,6 +8,9 @@ Astun.layersHoverInfo = {
 
 };
 
+// The event that will cause the info to show, commonly 'mouseover' or 'mouseup'
+Astun.layersHoverInfoShowEvent = 'mouseup';
+
 // -- Do not edit past this point -- //
 
 (function() {
@@ -39,6 +42,9 @@ Astun.layersHoverInfo = {
                 .addClass('atLayerInfoTooltip ui-state-default ui-corner-all')
                 .append('<div><span class="ui-icon ui-icon-triangle-1-n"></span><div class="text"></div></div>')
         );
+
+        // Determine the event that will trigger the info being shown
+        var showEventName = Astun.layersHoverInfoShowEvent || 'mouseover';
 
         // Add listeners to each layer in the list and decorate the
         // layer name with an info icon
