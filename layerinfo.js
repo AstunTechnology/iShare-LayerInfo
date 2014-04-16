@@ -9,7 +9,7 @@ Astun.layersHoverInfo = {
 };
 
 // The event that will cause the info to show, commonly 'mouseover' or 'mouseup'
-Astun.layersHoverInfoShowEvent = 'mouseup';
+Astun.layersHoverInfoShowEvent = 'mouseover';
 
 // -- Do not edit past this point -- //
 
