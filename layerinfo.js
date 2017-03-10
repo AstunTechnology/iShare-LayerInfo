@@ -60,15 +60,21 @@ Astun.layersHoverInfoShowEvent = 'mouseover';
                         .show()
                         .find('.text').html(value);
                 })
-                .live('mouseout', function(e){
-                    if (jQuery(e.srcElement).hasClass('atLayerInfoIcon') || jQuery(e.relatedTarget).hasClass('atLayerInfoIcon')) {
-                        // Ignore the event as the mouse has just moved to the icon
-                    } else {
-                        jQuery('.atLayerInfoTooltip').hide();
-                    }
-                })
+                .live('mouseout', hideInfoTooltip)
                 .append('<span class="atLayerInfoIcon"></span>');
         });
+
+        // Global handler to hide the info tooltip when the user
+        // touches anywhere
+        jQuery('body').live('touchstart', hideInfoTooltip);
+
+        function hideInfoTooltip(e) {
+            if (jQuery(e.srcElement).hasClass('atLayerInfoIcon') || jQuery(e.relatedTarget).hasClass('atLayerInfoIcon')) {
+                // Ignore the event as the mouse has just moved to the icon
+            } else {
+                jQuery('.atLayerInfoTooltip').hide();
+            }
+        }
 
     }
 
