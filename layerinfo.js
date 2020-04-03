@@ -3,8 +3,8 @@ Astun.layersHoverInfo = {
     // Add an entry for each layer. The layer name should be as found
     // in the mapfile.
     // Ensure that all lines except the last end with a comma
-    "Wards" : "Ward boundaries maintained by the Office of National Statistics",
-    "SchoolsPrim" : "Primary Schools maintained by the Local Authority"
+    "Wards_OGC" : "Ward boundaries maintained by the Office of National Statistics",
+    "Primary_Schools_OGC" : "Primary Schools maintained by the Local Authority"
 
 };
 
@@ -49,8 +49,10 @@ Astun.layersHoverInfoShowEvent = 'mouseover';
         // Add listeners to each layer in the list and decorate the
         // layer name with an info icon
         jQuery.each(Astun.layersHoverInfo, function(key, value) {
-            jQuery('li[aria-describedby="'+key+'"]')
-                .find('a > span')
+            // we have switched from using the aria- attributes to using data-
+            // custom attributes but we still need to retain backwards compatibility,
+            // so we search for both
+            jQuery('li[data-layer-name="' + key + '"] a > span,li[aria-describedby="' + key + '"] a > span')
                 .live(showEventName, function(){
                     var t = jQuery(this).offset().top + jQuery(this).parents('li').height() + 10;
                     var l = jQuery(this).parents('li').offset().left;
