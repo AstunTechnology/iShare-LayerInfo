@@ -54,7 +54,8 @@ Astun.layersHoverInfoShowEvent = 'mouseover';
             // so we search for both
             jQuery('li[data-layer-name="' + key + '"] a > span,li[aria-describedby="' + key + '"] a > span')
                 .live(showEventName, function(){
-                    var t = jQuery(this).offset().top + jQuery(this).parents('li').height() + 10;
+                    var $layerInfoIcon = jQuery(this).find('.atLayerInfoIcon');
+                    var t = $layerInfoIcon.offset().top + $layerInfoIcon.height() + 5;
                     var l = jQuery(this).parents('li').offset().left;
                     var w = jQuery(this).parents('li').width();
                     jQuery('.atLayerInfoTooltip')
